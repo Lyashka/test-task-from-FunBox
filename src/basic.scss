@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(./font/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: .2s ease-in-out;
+  font: 1em "Roboto", Helvetica, sans-serif;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollBar {
+  width: 0px;
+  background: transparent;
+}
+
+html, body {
+  min-height: 100%;
+  scrollBar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  @include flex-col();
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: url(./img/background.png);
+  background-size: 5%;
+}
