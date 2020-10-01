@@ -20,7 +20,6 @@
   padding: 0;
   margin: 0;
   transition: .2s ease-in-out;
-  font: 1em "Roboto", Helvetica, sans-serif;
 }
 
 a {
@@ -32,6 +31,7 @@ a {
 }
 
 button {
+  font: 1em "Roboto", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   border: none;
@@ -43,6 +43,10 @@ button {
 img {
   display: block;
   width: 100%;
+}
+
+p {
+  line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,19 +63,16 @@ ul {
   background: transparent;
 }
 
-html, body {
+html {
   min-height: 100%;
-  scrollBar-width: none;
-  -ms-overflow-style: none;
 }
 
 body {
-  @include flex-col();
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
+  min-height: 100%;
+  font: 1em "Roboto", Helvetica, sans-serif;
+  color: #000000;
   line-height: 1;
-  color: #FFFFFF;
+
   background-color: #000000;
   background-image: url(./img/background.png);
   background-size: 5%;

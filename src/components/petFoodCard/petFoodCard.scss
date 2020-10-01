@@ -1,0 +1,137 @@
+@import '../../basic.scss';
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../../font/Roboto-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.pet-food-card {
+  @include flex-col();
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  min-height: 320px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.pet-food-card__header {
+  @include flex-row();
+  align-items: center;
+  position: relative;
+}
+
+.header {}
+
+.header__angle {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  background-image: linear-gradient(to bottom right, transparent 46%, #1698d9 46% 54%, #FFFFFF 54%);
+  background-repeat: no-repeat;
+}
+
+.header__text {
+  @include flex-row();
+  align-items: center;
+  flex: 1 0 auto;
+  height: 32px;
+  font-size: 0.7em;
+  color: #666666;
+  background-color: #FFFFFF;
+  border-top-right-radius: 10px;
+  border-top: 3px solid #1698d9;
+  border-right: 3px solid #1698d9;
+}
+
+.pet-food-card__main {
+  @include flex-col();
+  flex: 1 0 auto;
+  position: relative;
+  padding-left: 32px;
+
+  background-color: #FFFFFF;
+  background-image: url(../../img/background-cat.png);
+  background-repeat: no-repeat;
+  background-position-x: -15px;
+  background-position-y: 110px;
+  background-size: 110%;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 3px solid #1698d9;
+  border-bottom: 3px solid #1698d9;
+  border-right: 3px solid #1698d9;
+}
+
+.pet-food-card__name {
+  @include flex-row();
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+.pet-food-card__stuffing {
+  @include flex-row();
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.pet-food-card__portions {
+  font-weight: 500;
+  font-size: 0.8em;
+  color: #666666;
+}
+
+.pet-food-card__present {
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #666666;
+}
+
+.pet-food-card__container-volume {
+  @include flex-col();
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+
+  border-radius: 50%;
+  background-color: #1698d9;
+}
+
+.pet-food-card__volume {
+  @include flex-row();
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 2.3em;
+}
+
+.pet-food-card__unit {
+  @include flex-row();
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 2em;
+}
+
+.pet-food-card__footer {
+  @include flex-row();
+  justify-content: center;
+}
+
+.pet-food-card__signature {
+  color: #FFFFFF;
+}
+
+.pet-food-card__buy-button {
+  color: #1698d9;
+  border-bottom: 1px dashed #1698d9;
+}
