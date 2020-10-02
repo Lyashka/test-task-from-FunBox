@@ -10,8 +10,8 @@
 .pet-food-card {
   @include flex-col();
   flex-wrap: wrap;
-  flex: 1 0 auto;
-  min-height: 320px;
+  flex: 1 0 300px;
+  min-height: 350px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -54,11 +54,11 @@
   padding-left: 32px;
 
   background-color: #FFFFFF;
-  background-image: url(../../img/background-cat.png);
+  /*background-image: url(../../img/background-cat.png);
   background-repeat: no-repeat;
   background-position-x: -15px;
   background-position-y: 110px;
-  background-size: 110%;
+  background-size: 110%;*/
 
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -66,6 +66,22 @@
   border-bottom: 3px solid #1698d9;
   border-right: 3px solid #1698d9;
 }
+
+/*.pet-food-card__main::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 244px;
+  height: 240px;
+
+  background-image: url(../../img/background-cat.png);
+  background-repeat: no-repeat;
+  background-position-x: -10px;
+  background-position-y: 60px;
+  background-size: 100%;
+  border-bottom-left-radius: 8px;
+}*/
 
 .pet-food-card__name {
   @include flex-row();
@@ -88,9 +104,25 @@
 }
 
 .pet-food-card__present {
+  position: relative;
   font-weight: 500;
   font-size: 0.7em;
   color: #666666;
+}
+
+.pet-food-card__present::after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  bottom: -207px;
+  width: 180px;
+  height: 180px;
+
+  background-image: url(../../img/background-cat.png);
+  background-repeat: no-repeat;
+  background-position-x: -10px;
+  background-size: 140%;
+  border-bottom-left-radius: 8px;
 }
 
 .pet-food-card__container-volume {
@@ -103,6 +135,7 @@
   right: 20px;
 
   border-radius: 50%;
+  z-index: 1;
   background-color: #1698d9;
 }
 
