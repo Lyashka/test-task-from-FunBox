@@ -1,0 +1,15 @@
+@import '../../basic.scss';
+
+.footer {
+  @include flex-row();
+  justify-content: center;
+}
+
+.footer__signature {
+  color: #FFFFFF;
+}
+
+.footer__buy-button {
+  color: #1698d9;
+  border-bottom: 1px dashed #1698d9;
+}

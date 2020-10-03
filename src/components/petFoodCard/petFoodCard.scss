@@ -9,17 +9,34 @@
 
 .pet-food-card {
   @include flex-col();
-  flex-wrap: wrap;
-  flex: 1 0 300px;
-  min-height: 350px;
+  position: relative;
+  height: 100%;
+  width: 260px;
   margin-bottom: 10px;
   border-radius: 10px;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+
+    width: 180px;
+    height: 180px;
+
+    background-image: url(../../img/background-cat.png);
+    background-repeat: no-repeat;
+    background-position-x: -10px;
+    background-size: 140%;
+    border-bottom-left-radius: 8px;
+  }
 }
 
 .pet-food-card__header {
   @include flex-row();
   align-items: center;
-  position: relative;
+  min-height: 32px;
 }
 
 .header {}
@@ -37,8 +54,8 @@
 .header__text {
   @include flex-row();
   align-items: center;
+  min-height: 100%;
   flex: 1 0 auto;
-  height: 32px;
   font-size: 0.7em;
   color: #666666;
   background-color: #FFFFFF;
@@ -54,34 +71,12 @@
   padding-left: 32px;
 
   background-color: #FFFFFF;
-  /*background-image: url(../../img/background-cat.png);
-  background-repeat: no-repeat;
-  background-position-x: -15px;
-  background-position-y: 110px;
-  background-size: 110%;*/
-
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-left: 3px solid #1698d9;
   border-bottom: 3px solid #1698d9;
   border-right: 3px solid #1698d9;
 }
-
-/*.pet-food-card__main::after {
-  content: '';
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 244px;
-  height: 240px;
-
-  background-image: url(../../img/background-cat.png);
-  background-repeat: no-repeat;
-  background-position-x: -10px;
-  background-position-y: 60px;
-  background-size: 100%;
-  border-bottom-left-radius: 8px;
-}*/
 
 .pet-food-card__name {
   @include flex-row();
@@ -104,25 +99,9 @@
 }
 
 .pet-food-card__present {
-  position: relative;
   font-weight: 500;
   font-size: 0.7em;
   color: #666666;
-}
-
-.pet-food-card__present::after {
-  content: '';
-  position: absolute;
-  left: -32px;
-  bottom: -207px;
-  width: 180px;
-  height: 180px;
-
-  background-image: url(../../img/background-cat.png);
-  background-repeat: no-repeat;
-  background-position-x: -10px;
-  background-size: 140%;
-  border-bottom-left-radius: 8px;
 }
 
 .pet-food-card__container-volume {
@@ -135,8 +114,8 @@
   right: 20px;
 
   border-radius: 50%;
-  z-index: 1;
   background-color: #1698d9;
+  z-index: 1;
 }
 
 .pet-food-card__volume {
@@ -155,16 +134,66 @@
   font-size: 2em;
 }
 
-.pet-food-card__footer {
-  @include flex-row();
-  justify-content: center;
-}
+@media screen and (min-width: 1100px) {
+  .pet-food-card {
+    width: 320px;
 
-.pet-food-card__signature {
-  color: #FFFFFF;
-}
+    &::after {
+      bottom: 4px;
+      left: 4px;
+      width: 240px;
+      height: 240px;
+    }
+  }
 
-.pet-food-card__buy-button {
-  color: #1698d9;
-  border-bottom: 1px dashed #1698d9;
+  .header__angle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__text {
+    border-width: 4px;
+  }
+
+  .pet-food-card__main {
+    padding-left: 40px;
+    border-width: 4px;
+  }
+
+  .pet-food-card__name {
+    font-size: 2.6em;
+  }
+
+  .pet-food-card__stuffing {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  .pet-food-card__portions {
+    font-size: 0.9em;
+  }
+
+  .pet-food-card__present {
+    font-size: 0.8em;
+  }
+
+  .header__text {
+    height: 40px;
+    font-size: 0.8em;
+  }
+
+  .pet-food-card__container-volume {
+    width: 90px;
+    height: 90px;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .pet-food-card__volume {
+    font-size: 2.4em;
+  }
+
+  .pet-food-card__unit {
+    font-size: 2em;
+  }
 }
