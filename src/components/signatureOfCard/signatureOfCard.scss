@@ -3,13 +3,30 @@
 .footer {
   @include flex-row();
   justify-content: center;
+  height: 30px;
+  width: 260px;
 }
 
 .footer__signature {
+  text-align: center;
+  font-size: 0.8em;
   color: #FFFFFF;
+  height: 30px;
+  width: 260px;
 }
 
 .footer__buy-button {
   color: #1698d9;
   border-bottom: 1px dashed #1698d9;
+}
+
+.footer_disabled {
+  @include flex-row();
+  justify-content: center;
+  height: 30px;
+}
+
+.footer_disabled__signature {
+  font-size: 0.8em;
+  color: #FFFF66;
 }
