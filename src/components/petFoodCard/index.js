@@ -34,11 +34,11 @@ export default class PetFoodCard extends Component {
       case this.isDisable:
         feedCardStatus += ' feed-selection-button_disable';
         break;
-      case this.state.status === 'default':
-        feedCardStatus += ' feed-selection-button_default';
-        break;
       case this.state.status === 'selected':
         feedCardStatus += ' feed-selection-button_selected';
+        break;
+      default:
+        feedCardStatus += ' feed-selection-button_default';
         break;
     }
 
