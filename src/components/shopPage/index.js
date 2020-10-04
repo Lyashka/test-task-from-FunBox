@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { typesFeed } from '../../localStore.js';
+import { typesFeed } from '../../localStorage.js';
 import PetFoodCard from '../petFoodCard';
 import './shopPage.scss';
 
