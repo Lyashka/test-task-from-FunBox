@@ -1,18 +1,38 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { typesFeed } from '../../localStore.js';
 import PetFoodCard from '../petFoodCard';
 import './shopPage.scss';
 
-export default function ShopPage(props) {
-  return (
-    <div className="shop-page">
+export default class ShopPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cards: [...typesFeed],
+    }
+  }
+
+  render() {
+    return (
+      <div className="shop-page">
       <header className="title">
         <h3 className="title__text">Ты сегодня покормил кота?</h3>
       </header>
       <ul className="cards">
-        <li><PetFoodCard /></li>
-        <li><PetFoodCard /></li>
-        <li><PetFoodCard /></li>
+        {this.state.cards.map((card) => (
+          <li key={card.id}>
+            <PetFoodCard
+            presence={card.presence}
+            stuffing={card.stuffing}
+            portions={card.portions}
+            present={card.present}
+            volume={card.volume}
+            description={card.description}
+            />
+          </li>
+        ))}
       </ul>
     </div>
-  )
+    )
+  }
 }
