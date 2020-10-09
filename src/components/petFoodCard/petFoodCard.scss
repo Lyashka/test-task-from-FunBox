@@ -104,6 +104,8 @@
 
   .header__text_selected-hover {
     display: none;
+    border-top: 3px solid #D91667;
+    border-right: 3px solid #D91667;
   }
 
   .pet-food-card__main {
@@ -126,8 +128,7 @@
     .header__text_selected-hover {
       @include flex-row();
       color: #E52E7A;
-      border-top: 3px solid #E52E7A;
-      border-right: 3px solid #E52E7A;
+      border-color: #E52E7A;
     }
 
     .pet-food-card__main {
