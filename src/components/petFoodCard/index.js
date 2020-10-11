@@ -19,6 +19,7 @@ export default class PetFoodCard extends Component {
     }
 
     this.handlerChangeStatus = this.handlerChangeStatus.bind(this);
+    this.handlerMouseEnterCard = this.handlerMouseEnterCard.bind(this);
   }
 
   handlerChangeStatus() {
@@ -54,6 +55,7 @@ export default class PetFoodCard extends Component {
       <button
         className={feedCardClasses}
         onClick={this.handlerChangeStatus}
+        onMouseEnter={(e) => this.handlerMouseEnterCard(e)}
         disabled={this.isDisable}>
         <article className="pet-food-card">
           <header className="pet-food-card__header header">

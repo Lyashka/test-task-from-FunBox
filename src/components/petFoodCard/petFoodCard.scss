@@ -129,7 +129,9 @@
   .pet-food-card__container-volume {
     background-color: #D91667;
   }
+}
 
+.special-hover {
   &:hover {
     .header__angle {
       background-image: linear-gradient(to bottom right, transparent 46%, #E52E7A 46% 54%, #FFFFFF 54%);
