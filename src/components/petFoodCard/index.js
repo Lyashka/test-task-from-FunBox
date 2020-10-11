@@ -10,7 +10,7 @@ export default class PetFoodCard extends Component {
     this.isDisable = !this.props.presence;
     this.stuffing = this.props.stuffing;
     this.portions = this.props.portions;
-    this.present = miceConjugation(this.props.present);
+    this.present = this.props.present;
     this.volume = this.props.volume;
     this.description = this.props.description;
 
@@ -64,8 +64,13 @@ export default class PetFoodCard extends Component {
           <main className="pet-food-card__main">
             <p className="pet-food-card__name">Нямушка</p>
             <p className="pet-food-card__stuffing">{`c ${this.stuffing}`}</p>
-            <p className="pet-food-card__portions">{`${this.portions} `}порций</p>
-            <p className="pet-food-card__present">{`${this.present} `}в подарок</p>
+            <p className="pet-food-card__portions"><b>{this.portions}</b>&nbsp;порций</p>
+            {this.present === 1 ?
+            <p className="pet-food-card__present">{`${miceConjugation(this.present)} в подарок`}</p> :
+            <p className="pet-food-card__present">
+              <b>{this.present}&nbsp;</b>
+              {`${miceConjugation(this.present)} в подарок`}
+            </p>}
             <div className="pet-food-card__container-volume">
               <p className="pet-food-card__volume">{this.volume}</p>
               <p className="pet-food-card__unit">кг</p>
