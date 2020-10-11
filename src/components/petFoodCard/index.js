@@ -28,24 +28,31 @@ export default class PetFoodCard extends Component {
     })
   }
 
+  handlerMouseEnterCard(event) {
+    if (this.state.status === 'selected') {
+      const card = event.target.closest('button');
+      card.classList.add('special-hover');
+    }
+  }
+
   render() {
-    let feedCardStatus = 'feed-selection-button';
+    let feedCardClasses = 'feed-selection-button';
     switch(true) {
       case this.isDisable:
-        feedCardStatus += ' feed-selection-button_disable';
+        feedCardClasses += ' feed-selection-button_disable';
         break;
       case this.state.status === 'selected':
-        feedCardStatus += ' feed-selection-button_selected';
+        feedCardClasses += ' feed-selection-button_selected';
         break;
       default:
-        feedCardStatus += ' feed-selection-button_default';
+        feedCardClasses += ' feed-selection-button_default';
         break;
     }
 
     return (
       <>
       <button
-        className={feedCardStatus}
+        className={feedCardClasses}
         onClick={this.handlerChangeStatus}
         disabled={this.isDisable}>
         <article className="pet-food-card">
