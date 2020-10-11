@@ -5,9 +5,9 @@ export default function miceConjugation(quantityMice) {
       conjugation = 'мышь';
       break;
     case quantityMice >= 2 && quantityMice <= 4:
-      conjugation = `${quantityMice} мыши`;
+      conjugation = `мыши`;
       break;
-    default: conjugation = `${quantityMice} мышей`;
+    default: conjugation = `мышей`;
   }
 
   return conjugation;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SignatureOfCard from '../signatureOfCard';
-import miceConjugation from '../../common/miceСonjugation.js';
+import miceConjugation from '../../common/miceConjugation.js';
 import './petFoodCard.scss';
 
 export default class PetFoodCard extends Component {
