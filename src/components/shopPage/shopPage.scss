@@ -16,26 +16,30 @@
   padding: 0px 10px;
 }
 
-.title {
+.shop-page__title {
   @include flex-row();
   justify-content: center;
   align-items: center;
   padding: 20px 0px;
 }
 
+.title {}
+
 .title__text {
   font: 1.2em "Exo 2", Helvetica, sans-serif;
   color: #FFFFFF;
 }
 
-.cards {
+.shop-page__cards {
   @include flex-row();
   justify-content: space-around;
   flex-wrap: wrap;
   margin-left: -20px;
 }
 
-.cards li {
+.cards {}
+
+.cards__item {
   @include flex-col();
   align-items: center;
   flex: 1 1 auto;
@@ -48,11 +52,11 @@
     font-size: 2.5em;
   }
 
-  .cards {
+  .shop-page__cards {
     margin-right: -50px;
   }
 
-  .cards li {
+  .cards__item {
     margin-right: 50px;
     min-height: 450px;
   }

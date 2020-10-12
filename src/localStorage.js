@@ -5,7 +5,7 @@ export const typesFeed = [
     stuffing: 'фуа-гра',
     portions: 10,
     present: 1,
-    volume: '0,5',
+    weight: '0,5',
     description: 'Печень утки разваренная с артишоками',
   },
   {
@@ -14,7 +14,7 @@ export const typesFeed = [
     stuffing: 'рыбой',
     portions: 40,
     present: 2,
-    volume: '2',
+    weight: '2',
     description: 'Головы щучьи с чесноком да свежайшая сёмгушка',
   },
   {
@@ -23,7 +23,7 @@ export const typesFeed = [
     stuffing: 'курой',
     portions: 100,
     present: 5,
-    volume: '5',
+    weight: '5',
     description: 'Филе из цыплят с трюфелями в бульоне',
   }
 ]

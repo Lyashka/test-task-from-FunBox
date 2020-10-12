@@ -11,7 +11,7 @@ export default class PetFoodCard extends Component {
     this.stuffing = this.props.stuffing;
     this.portions = this.props.portions;
     this.present = this.props.present;
-    this.volume = this.props.volume;
+    this.weight = this.props.weight;
     this.description = this.props.description;
 
     this.state = {
@@ -38,7 +38,7 @@ export default class PetFoodCard extends Component {
 
   render() {
     let feedCardClasses = 'feed-selection-button';
-    switch(true) {
+    switch (true) {
       case this.isDisable:
         feedCardClasses += ' feed-selection-button_disable';
         break;
@@ -52,40 +52,40 @@ export default class PetFoodCard extends Component {
 
     return (
       <>
-      <button
-        className={feedCardClasses}
-        onClick={this.handlerChangeStatus}
-        onMouseEnter={(e) => this.handlerMouseEnterCard(e)}
-        disabled={this.isDisable}>
-        <article className="pet-food-card">
-          <header className="pet-food-card__header header">
-            <div className="header__angle"></div>
-            <h2 className="header__text header__text_default">Сказочное заморское яство</h2>
-            <h2 className="header__text header__text_selected-hover">Котэ не одобряет?</h2>
-          </header>
-          <main className="pet-food-card__main">
-            <p className="pet-food-card__name">Нямушка</p>
-            <p className="pet-food-card__stuffing">{`c ${this.stuffing}`}</p>
-            <p className="pet-food-card__portions"><b>{this.portions}</b>&nbsp;порций</p>
-            {this.present === 1 ?
-            <p className="pet-food-card__present">{`${miceConjugation(this.present)} в подарок`}</p> :
-            <p className="pet-food-card__present">
-              <b>{this.present}&nbsp;</b>
-              {`${miceConjugation(this.present)} в подарок`}
-            </p>}
-            <div className="pet-food-card__container-volume">
-              <p className="pet-food-card__volume">{this.volume}</p>
-              <p className="pet-food-card__unit">кг</p>
-            </div>
-          </main>
-        </article>
-      </button>
-      <SignatureOfCard
-        isDisable={this.isDisable}
-        cardStatus={this.state.status}
-        stuffing={this.stuffing}
-        description={this.description}
-        changeCardStatus={this.handlerChangeStatus}/>
+        <button
+          className={feedCardClasses}
+          onClick={this.handlerChangeStatus}
+          onMouseEnter={(e) => this.handlerMouseEnterCard(e)}
+          disabled={this.isDisable}>
+          <article className="pet-food-card">
+            <header className="pet-food-card__header header">
+              <div className="header__angle"></div>
+              <h2 className="header__text header__text_default">Сказочное заморское яство</h2>
+              <h2 className="header__text header__text_selected-hover">Котэ не одобряет?</h2>
+            </header>
+            <main className="pet-food-card__main">
+              <p className="pet-food-card__name">Нямушка</p>
+              <p className="pet-food-card__taste">{`c ${this.stuffing}`}</p>
+              <p className="pet-food-card__portions"><b>{this.portions}</b>&nbsp;порций</p>
+              {this.present === 1 ?
+                <p className="pet-food-card__present">{`${miceConjugation(this.present)} в подарок`}</p> :
+                <p className="pet-food-card__present">
+                  <b>{this.present}&nbsp;</b>
+                  {`${miceConjugation(this.present)} в подарок`}
+                </p>}
+              <div className="pet-food-card__container-weight">
+                <p className="pet-food-card__weight">{this.weight}</p>
+                <p className="pet-food-card__unit">кг</p>
+              </div>
+            </main>
+          </article>
+        </button>
+        <SignatureOfCard
+          isDisable={this.isDisable}
+          cardStatus={this.state.status}
+          stuffing={this.stuffing}
+          description={this.description}
+          changeCardStatus={this.handlerChangeStatus} />
       </>
     )
   }
