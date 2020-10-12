@@ -35,6 +35,7 @@
 
   .header__angle {
     background-image: linear-gradient(to bottom right, transparent 46%, #B3B3B3 46% 54%, #FFFFFF 54%);
+    -ms-linear-gradient: (top left, transparent 0%, transparent 46%, #B3B3B3 46%, #B3B3B3 55%, #FFFFFF 55%);
   }
 
   .header__text {
@@ -90,6 +91,7 @@
   &:hover {
     .header__angle {
       background-image: linear-gradient(to bottom right, transparent 46%, #2EA8E6 46% 54%, #FFFFFF 54%);
+      -ms-linear-gradient: (top left, transparent 0%, transparent 46%, #2EA8E6  46%, #2EA8E6  55%, #FFFFFF 55%);
     }
 
     .header__text_default {
@@ -109,6 +111,7 @@
 .feed-selection-button_selected {
   .header__angle {
     background-image: linear-gradient(to bottom right, transparent 46%, #D91667 46% 54%, #FFFFFF 54%);
+    -ms-linear-gradient: (top left, transparent 0%, transparent 46%, #D91667  46%, #D91667  55%, #FFFFFF 55%);
   }
 
   .header__text_default {
@@ -135,6 +138,7 @@
   &:hover {
     .header__angle {
       background-image: linear-gradient(to bottom right, transparent 46%, #E52E7A 46% 54%, #FFFFFF 54%);
+      -ms-linear-gradient: (top left, transparent 0%, transparent 46%, #E52E7A 46%, #E52E7A 55%, #FFFFFF 55%);
     }
 
     .header__text_default {
@@ -197,6 +201,8 @@
   width: 32px;
   height: 32px;
   background-image: linear-gradient(to bottom right, transparent 46%, #1698D9 46% 54%, #FFFFFF 54%);
+  -ms-linear-gradient: (top left, transparent 0%, transparent 46%, #1698D9 46%, #1698D9 55%, #FFFFFF 55%);
+
   background-repeat: no-repeat;
 }
 
